@@ -88,6 +88,11 @@ button { cursor: pointer; font: inherit; }
   transition: color 0.2s;
 }
 
+.nav.scrolled {
+  background: var(--cream);
+  box-shadow: 0 1px 0 var(--rule);
+}
+
 .nav.light-nav .nav-logo { color: var(--cream); }
 .nav.light-nav .nav-links a { color: rgba(245,240,232,0.65); }
 .nav.light-nav .nav-links a:hover { color: var(--cream); }
@@ -157,15 +162,6 @@ button { cursor: pointer; font: inherit; }
   overflow: hidden;
 }
 
-/* Grain texture overlay */
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-  opacity: 0.4;
-  pointer-events: none;
-}
 
 .hero-label {
   display: flex;
@@ -509,27 +505,20 @@ button { cursor: pointer; font: inherit; }
 }
 
 .accordion-body {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.35s ease;
-  padding-left: 80px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
 }
 
 .accordion-body p {
-  overflow: hidden;
   font-size: 0.95rem;
   color: var(--ink-mid);
   line-height: 1.8;
-  padding-bottom: 0;
-  transition: padding-bottom 0.35s ease;
+  padding: 0 0 28px 80px;
 }
 
 .accordion-item.open .accordion-body {
-  grid-template-rows: 1fr;
-}
-
-.accordion-item.open .accordion-body p {
-  padding-bottom: 28px;
+  max-height: 300px;
 }
 
 /* Initiatives */
@@ -630,53 +619,48 @@ button { cursor: pointer; font: inherit; }
   line-height: 1.75;
 }
 
-.offices-map {
+.offices-grid {
   display: grid;
-  grid-template-columns: 1fr 300px;
-  gap: 64px;
-  align-items: start;
-}
-
-.dot-map {
-  width: 100%;
-  color: var(--cream);
-  opacity: 0.9;
-}
-
-.office-pin { cursor: default; }
-.office-pin circle:last-of-type { transition: r 0.2s; }
-.office-pin:hover circle:last-of-type { r: 6; }
-
-.offices-list {
-  display: flex;
-  flex-direction: column;
-  border-top: 1px solid rgba(245,240,232,0.1);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(245,240,232,0.08);
 }
 
 .office-entry {
   display: flex;
   flex-direction: column;
-  padding: 20px 0;
-  border-bottom: 1px solid rgba(245,240,232,0.08);
-  gap: 4px;
-  transition: padding-left 0.2s;
+  gap: 6px;
+  padding: 40px 36px;
+  background: var(--ink);
+  transition: background 0.2s;
 }
 
-.office-entry:hover { padding-left: 8px; }
+.office-entry:hover {
+  background: #22190a;
+}
 
 .office-region {
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: rgba(245,240,232,0.35);
+  color: rgba(245,240,232,0.3);
 }
 
 .office-city {
   font-family: var(--font-display);
-  font-size: 1.3rem;
-  font-weight: 300;
+  font-size: 2.2rem;
+  font-weight: 200;
+  font-style: italic;
   color: var(--cream);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.office-country {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--terracotta);
 }
 
 /* =============================================
@@ -852,19 +836,8 @@ button { cursor: pointer; font: inherit; }
   .mission-col:nth-child(2) { border-right: none; margin-right: 0; padding-right: 0; }
   .mission-col-accent { grid-column: 1 / -1; border-right: none; }
 
-  .offices-map {
-    grid-template-columns: 1fr;
-  }
-
-  .offices-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border-top: none;
-  }
-
-  .office-entry {
-    border: 1px solid rgba(245,240,232,0.08);
-    padding: 20px;
+  .offices-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .contact-inner {
@@ -975,7 +948,7 @@ button { cursor: pointer; font: inherit; }
     grid-template-columns: 1fr;
   }
 
-  .offices-list {
+  .offices-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -997,7 +970,7 @@ button { cursor: pointer; font: inherit; }
 
   .presence-heading { font-size: 2.2rem; }
 
-  .offices-list {
+  .offices-grid {
     grid-template-columns: 1fr;
   }
 

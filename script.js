@@ -10,8 +10,10 @@ function updateNav() {
   const heroBottom = hero.getBoundingClientRect().bottom;
   if (heroBottom > 0) {
     nav.classList.add('light-nav');
+    nav.classList.remove('scrolled');
   } else {
     nav.classList.remove('light-nav');
+    nav.classList.add('scrolled');
   }
 }
 
@@ -89,7 +91,6 @@ const revealObs = new IntersectionObserver(entries => {
 const revealSelectors = [
   '.mission-quote',
   '.mission-col',
-  '.accordion-item',
   '.initiative',
   '.office-entry',
   '.presence-heading',

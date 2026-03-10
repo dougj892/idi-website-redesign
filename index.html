@@ -6,7 +6,7 @@
   <title>IDinsight — Improving Lives with Data & Evidence</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,400;0,9..144,500;1,9..144,200;1,9..144,400&family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -15,353 +15,451 @@
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="#" class="nav-logo">IDinsight</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Our Work</a></li>
-        <li><a href="#sectors">Sectors</a></li>
-        <li><a href="#presence">Where We Work</a></li>
-        <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#presence">Presence</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Toggle menu" id="navToggle">
-        <span></span><span></span><span></span>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span>
       </button>
     </div>
   </nav>
 
   <!-- Hero -->
   <section class="hero" id="hero">
-    <div class="hero-bg">
-      <div class="hero-orb hero-orb-1"></div>
-      <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-label">
+      <span class="mono">Est. 2012</span>
+      <span class="divider"></span>
+      <span class="mono">Global advisory &amp; research</span>
     </div>
-    <div class="container hero-content">
-      <p class="hero-eyebrow">Data · Evidence · Impact</p>
-      <h1 class="hero-heading">We transform how the world <em>fights poverty</em></h1>
-      <p class="hero-sub">IDinsight combines global evidence with on-the-ground data to help governments, NGOs, and foundations make decisions that save and improve lives.</p>
-      <div class="hero-actions">
-        <a href="#work" class="btn btn-primary">Explore Our Work</a>
-        <a href="#about" class="btn btn-ghost">Learn About Us</a>
+
+    <div class="hero-body">
+      <div class="hero-text">
+        <h1 class="hero-heading">
+          <span class="hero-line">We transform</span>
+          <span class="hero-line hero-line-indent">how the world</span>
+          <span class="hero-line hero-line-accent">fights poverty.</span>
+        </h1>
+        <p class="hero-sub">Combining global evidence with on-the-ground data — across 30+ countries — to help governments, NGOs, and foundations make decisions that save lives.</p>
+        <a href="#work" class="hero-link">
+          Explore our work
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
       </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-number">180+</span>
-          <span class="stat-label">Projects Completed</span>
+
+      <div class="hero-data">
+        <div class="hero-stat">
+          <span class="hero-stat-n" data-target="180">0</span>
+          <span class="hero-stat-plus">+</span>
+          <span class="hero-stat-label">projects completed</span>
         </div>
-        <div class="stat">
-          <span class="stat-number">30+</span>
-          <span class="stat-label">Countries</span>
+        <div class="hero-rule"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-n" data-target="30">0</span>
+          <span class="hero-stat-plus">+</span>
+          <span class="hero-stat-label">countries</span>
         </div>
-        <div class="stat">
-          <span class="stat-number">250+</span>
-          <span class="stat-label">Team Members</span>
+        <div class="hero-rule"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-n" data-target="250">0</span>
+          <span class="hero-stat-plus">+</span>
+          <span class="hero-stat-label">team members</span>
         </div>
-        <div class="stat">
-          <span class="stat-number">6</span>
-          <span class="stat-label">Regional Offices</span>
+        <div class="hero-rule"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-n" data-target="6">0</span>
+          <span class="hero-stat-plus">&nbsp;</span>
+          <span class="hero-stat-label">regional offices</span>
         </div>
       </div>
     </div>
-    <a href="#about" class="scroll-hint" aria-label="Scroll down">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-    </a>
+
+    <div class="hero-ticker-wrap" aria-hidden="true">
+      <div class="hero-ticker">
+        <span>Agriculture</span><span class="dot">·</span>
+        <span>Education</span><span class="dot">·</span>
+        <span>Health &amp; Nutrition</span><span class="dot">·</span>
+        <span>Financial Inclusion</span><span class="dot">·</span>
+        <span>Gender Equity</span><span class="dot">·</span>
+        <span>Governance</span><span class="dot">·</span>
+        <span>Environment &amp; Energy</span><span class="dot">·</span>
+        <span>Livelihoods</span><span class="dot">·</span>
+        <span>WASH</span><span class="dot">·</span>
+        <span>Agriculture</span><span class="dot">·</span>
+        <span>Education</span><span class="dot">·</span>
+        <span>Health &amp; Nutrition</span><span class="dot">·</span>
+        <span>Financial Inclusion</span><span class="dot">·</span>
+        <span>Gender Equity</span><span class="dot">·</span>
+        <span>Governance</span><span class="dot">·</span>
+        <span>Environment &amp; Energy</span><span class="dot">·</span>
+        <span>Livelihoods</span><span class="dot">·</span>
+        <span>WASH</span><span class="dot">·</span>
+      </div>
+    </div>
   </section>
 
-  <!-- About -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="section-split">
-        <div class="section-split-text">
-          <p class="eyebrow">Who We Are</p>
-          <h2>A global advisory built for impact</h2>
-          <p>IDinsight is a nonprofit data analytics, advisory, and research organization that helps development leaders maximize social impact. We sit at the intersection of rigorous evidence and practical action — bringing the best analytical tools to the decisions that matter most.</p>
-          <p>We work side-by-side with partners to design better programs, evaluate what works, and build the capacity to sustain evidence-informed decision-making long after we leave.</p>
-          <a href="#work" class="btn btn-outline">See Our Approach</a>
+  <!-- Mission / About -->
+  <section id="mission" class="section-mission">
+    <div class="mission-inner">
+      <div class="mission-label">
+        <span class="mono label-tag">About IDinsight</span>
+      </div>
+      <blockquote class="mission-quote">
+        "We sit at the intersection of<br class="br-desk"> rigorous evidence and<br class="br-desk"> practical action."
+      </blockquote>
+      <div class="mission-cols">
+        <div class="mission-col">
+          <p>IDinsight is a nonprofit data analytics, advisory, and research organization. We help development leaders maximize social impact by bringing the best analytical tools to the decisions that matter most — not just in theory, but in the field, with real stakes.</p>
         </div>
-        <div class="section-split-visual">
-          <div class="values-grid">
-            <div class="value-card">
-              <div class="value-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
-              </div>
-              <h3>Rigorous Evidence</h3>
-              <p>We apply the gold standard of randomized evaluations alongside cutting-edge data science and machine learning.</p>
-            </div>
-            <div class="value-card">
-              <div class="value-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-              </div>
-              <h3>Local Knowledge</h3>
-              <p>Our teams are embedded in the communities where we work, bringing contextual insight that global evidence alone can't provide.</p>
-            </div>
-            <div class="value-card">
-              <div class="value-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-              </div>
-              <h3>Actionable Impact</h3>
-              <p>Every analysis is designed to drive decisions. We translate complex findings into clear recommendations that partners can act on.</p>
-            </div>
-            <div class="value-card">
-              <div class="value-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
-              </div>
-              <h3>Diverse Perspectives</h3>
-              <p>We believe the best solutions come from diverse teams. Inclusion isn't just a value — it's central to the quality of our work.</p>
-            </div>
+        <div class="mission-col">
+          <p>We work side-by-side with partners to design better programs, evaluate what works, and build the capacity to sustain evidence-informed decision-making. We don't parachute in with pre-packaged solutions. We listen, we adapt, and we stay until the work is done.</p>
+        </div>
+        <div class="mission-col mission-col-accent">
+          <p class="col-header mono">Who we work with</p>
+          <ul class="partner-list">
+            <li>Governments &amp; public agencies</li>
+            <li>International organizations</li>
+            <li>NGOs &amp; civil society</li>
+            <li>Philanthropic foundations</li>
+            <li>Businesses &amp; social enterprises</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section id="work" class="section-work">
+    <div class="work-inner">
+      <div class="work-header">
+        <span class="mono label-tag">Our methods</span>
+        <h2 class="work-heading">What we actually do</h2>
+      </div>
+
+      <div class="work-accordion">
+        <div class="accordion-item" data-n="01">
+          <button class="accordion-trigger">
+            <span class="acc-num mono">01</span>
+            <span class="acc-title">Impact Evaluations</span>
+            <span class="acc-arrow">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+          </button>
+          <div class="accordion-body">
+            <p>Randomized controlled trials and quasi-experimental designs that establish causal evidence of what works — and what doesn't. We design evaluations to answer the questions partners actually need answered, not just the questions that are easiest to study.</p>
+          </div>
+        </div>
+        <div class="accordion-item" data-n="02">
+          <button class="accordion-trigger">
+            <span class="acc-num mono">02</span>
+            <span class="acc-title">Data Science &amp; AI</span>
+            <span class="acc-arrow">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+          </button>
+          <div class="accordion-body">
+            <p>Machine learning, predictive modeling, and AI solutions that unlock patterns in data to inform smarter decisions. We build tools that teams can actually use — not black boxes that require a PhD to interpret.</p>
+          </div>
+        </div>
+        <div class="accordion-item" data-n="03">
+          <button class="accordion-trigger">
+            <span class="acc-num mono">03</span>
+            <span class="acc-title">Quick Turnaround Surveys</span>
+            <span class="acc-arrow">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+          </button>
+          <div class="accordion-body">
+            <p>High-quality data collection for time-sensitive decisions. When a government needs to know something next month — not next year — we design and execute surveys that deliver actionable intelligence fast, without sacrificing rigor.</p>
+          </div>
+        </div>
+        <div class="accordion-item" data-n="04">
+          <button class="accordion-trigger">
+            <span class="acc-num mono">04</span>
+            <span class="acc-title">Process Evaluation</span>
+            <span class="acc-arrow">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+          </button>
+          <div class="accordion-body">
+            <p>Deep investigation into implementation quality and fidelity. We reveal not just whether a program worked, but why it worked — or why it didn't. That distinction matters when you're trying to scale what succeeds.</p>
+          </div>
+        </div>
+        <div class="accordion-item" data-n="05">
+          <button class="accordion-trigger">
+            <span class="acc-num mono">05</span>
+            <span class="acc-title">Monitoring Systems</span>
+            <span class="acc-arrow">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+          </button>
+          <div class="accordion-body">
+            <p>Custom dashboards and adaptive data systems that give partners ongoing visibility into program performance. We build for the actual users — field staff, program officers, ministers — not for data scientists.</p>
+          </div>
+        </div>
+        <div class="accordion-item" data-n="06">
+          <button class="accordion-trigger">
+            <span class="acc-num mono">06</span>
+            <span class="acc-title">Capacity Building</span>
+            <span class="acc-arrow">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+          </button>
+          <div class="accordion-body">
+            <p>Training, embedding, and institutional support that builds evidence culture from within. We succeed when our partners no longer need us — when the skills, systems, and habits we've built sustain themselves.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Our Work -->
-  <section class="section section-dark" id="work">
-    <div class="container">
-      <div class="section-header">
-        <p class="eyebrow eyebrow-light">What We Do</p>
-        <h2>Methods built for the real world</h2>
-        <p class="section-intro">We offer a full suite of data and evidence tools — from rapid surveys to longitudinal evaluations — tailored to what each partner actually needs.</p>
-      </div>
-      <div class="methods-grid">
-        <div class="method-card">
-          <div class="method-number">01</div>
-          <h3>Impact Evaluations</h3>
-          <p>Rigorous randomized and quasi-experimental designs that establish causal evidence of what works — and what doesn't.</p>
-        </div>
-        <div class="method-card">
-          <div class="method-number">02</div>
-          <h3>Data Science & AI</h3>
-          <p>Machine learning, predictive analytics, and AI solutions that unlock patterns in data to inform smarter decisions.</p>
-        </div>
-        <div class="method-card">
-          <div class="method-number">03</div>
-          <h3>Quick Turnaround Surveys</h3>
-          <p>Rapid, high-quality data collection for time-sensitive decisions — delivering actionable insights when they're needed most.</p>
-        </div>
-        <div class="method-card">
-          <div class="method-number">04</div>
-          <h3>Process Evaluation</h3>
-          <p>Deep investigation into implementation quality and fidelity, revealing why programs succeed or fall short.</p>
-        </div>
-        <div class="method-card">
-          <div class="method-number">05</div>
-          <h3>Monitoring Systems</h3>
-          <p>Custom dashboards and data systems that give partners ongoing visibility into program performance.</p>
-        </div>
-        <div class="method-card">
-          <div class="method-number">06</div>
-          <h3>Capacity Building</h3>
-          <p>Training, mentoring, and institutional support that embeds evidence culture for the long term.</p>
-        </div>
-      </div>
-      <div class="work-cta">
-        <div class="spotlight-card">
-          <div class="spotlight-label">Spotlight</div>
+      <div class="work-initiatives">
+        <div class="initiative">
+          <div class="initiative-tag mono">Initiative</div>
           <h3>DataDelta</h3>
-          <p>Our data quality diagnostics service helps organizations understand where their data falls short — and how to fix it. Because better data means better decisions.</p>
-          <a href="#contact" class="btn btn-primary">Learn More</a>
+          <p>Data quality diagnostics for organizations that need to trust their numbers before acting on them.</p>
         </div>
-        <div class="spotlight-card">
-          <div class="spotlight-label">Initiative</div>
+        <div class="initiative initiative-green">
+          <div class="initiative-tag mono">Commitment</div>
           <h3>Upholding Dignity</h3>
-          <p>A commitment to ensuring that data collection and research practices respect the rights, privacy, and dignity of the communities we serve.</p>
-          <a href="#contact" class="btn btn-primary">Learn More</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sectors -->
-  <section class="section" id="sectors">
-    <div class="container">
-      <div class="section-header">
-        <p class="eyebrow">Where We Focus</p>
-        <h2>Sectors we serve</h2>
-        <p class="section-intro">From smallholder farmers to urban health systems, we work across the sectors where evidence can have the greatest reach.</p>
-      </div>
-      <div class="sectors-grid">
-        <div class="sector-tag">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
-          Agriculture
-        </div>
-        <div class="sector-tag">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
-          Education & Training
-        </div>
-        <div class="sector-tag">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
-          Environment & Energy
-        </div>
-        <div class="sector-tag">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          Financial Inclusion
-        </div>
-        <div class="sector-tag">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-          Gender Equity
-        </div>
-        <div class="sector-tag">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/></svg>
-          Governance
-        </div>
-        <div class="sector-tag">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-          Health & Nutrition
-        </div>
-        <div class="sector-tag">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-          Livelihoods & Basic Income
-        </div>
-        <div class="sector-tag">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"/></svg>
-          WASH
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Partners -->
-  <section class="section section-muted" id="partners">
-    <div class="container">
-      <div class="section-header">
-        <p class="eyebrow">Who We Work With</p>
-        <h2>Partners across the development ecosystem</h2>
-      </div>
-      <div class="partners-grid">
-        <div class="partner-type">
-          <div class="partner-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/></svg>
-          </div>
-          <h3>Governments</h3>
-          <p>National and subnational agencies using data to design and evaluate public programs at scale.</p>
-        </div>
-        <div class="partner-type">
-          <div class="partner-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
-          </div>
-          <h3>International Agencies</h3>
-          <p>Multilateral organizations seeking independent evidence on their investments and programs.</p>
-        </div>
-        <div class="partner-type">
-          <div class="partner-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-          </div>
-          <h3>NGOs</h3>
-          <p>Nonprofits committed to improving their programs with credible evidence and adaptive management.</p>
-        </div>
-        <div class="partner-type">
-          <div class="partner-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          </div>
-          <h3>Philanthropic Foundations</h3>
-          <p>Foundations using rigorous evidence to direct their giving where it will have the greatest impact.</p>
-        </div>
-        <div class="partner-type">
-          <div class="partner-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
-          </div>
-          <h3>Businesses & Social Enterprises</h3>
-          <p>Companies and social enterprises measuring and maximizing their social return on investment.</p>
+          <p>Ensuring every data collection practice respects the rights, privacy, and dignity of the people we study.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Geographic Presence -->
-  <section class="section" id="presence">
-    <div class="container">
-      <div class="section-header">
-        <p class="eyebrow">Where We Work</p>
-        <h2>Rooted in the regions that matter most</h2>
-        <p class="section-intro">Our offices are strategically placed across Africa and Asia — not just to reduce travel costs, but because local presence produces better work.</p>
+  <section id="presence" class="section-presence">
+    <div class="presence-inner">
+      <div class="presence-header">
+        <span class="mono label-tag label-light">Where we work</span>
+        <h2 class="presence-heading">Offices in the countries<br>where our work happens</h2>
+        <p class="presence-sub">Not remote advisors. We're embedded in the regions we serve, with teams that carry the context no global evidence base can provide.</p>
       </div>
-      <div class="offices-grid">
-        <div class="office-card">
-          <div class="office-region">South Asia</div>
-          <div class="office-city">New Delhi</div>
-          <div class="office-country">India</div>
-        </div>
-        <div class="office-card">
-          <div class="office-region">East Africa</div>
-          <div class="office-city">Nairobi</div>
-          <div class="office-country">Kenya</div>
-        </div>
-        <div class="office-card">
-          <div class="office-region">Southeast Asia</div>
-          <div class="office-city">Manila</div>
-          <div class="office-country">Philippines</div>
-        </div>
-        <div class="office-card">
-          <div class="office-region">West Africa</div>
-          <div class="office-city">Dakar</div>
-          <div class="office-country">Senegal</div>
-        </div>
-        <div class="office-card">
-          <div class="office-region">North Africa</div>
-          <div class="office-city">Rabat</div>
-          <div class="office-country">Morocco</div>
-        </div>
-        <div class="office-card">
-          <div class="office-region">Southern Africa</div>
-          <div class="office-city">Lusaka</div>
-          <div class="office-country">Zambia</div>
+
+      <div class="offices-map">
+        <svg class="dot-map" viewBox="0 0 900 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Simplified Africa & Asia continent outlines as dot grid -->
+          <!-- Africa dots -->
+          <g class="map-dots" opacity="0.18">
+            <circle cx="340" cy="130" r="2.5" fill="currentColor"/>
+            <circle cx="356" cy="126" r="2.5" fill="currentColor"/>
+            <circle cx="372" cy="124" r="2.5" fill="currentColor"/>
+            <circle cx="388" cy="126" r="2.5" fill="currentColor"/>
+            <circle cx="404" cy="130" r="2.5" fill="currentColor"/>
+            <circle cx="418" cy="138" r="2.5" fill="currentColor"/>
+            <circle cx="428" cy="150" r="2.5" fill="currentColor"/>
+            <circle cx="432" cy="165" r="2.5" fill="currentColor"/>
+            <circle cx="430" cy="180" r="2.5" fill="currentColor"/>
+            <circle cx="424" cy="195" r="2.5" fill="currentColor"/>
+            <circle cx="414" cy="208" r="2.5" fill="currentColor"/>
+            <circle cx="400" cy="218" r="2.5" fill="currentColor"/>
+            <circle cx="384" cy="224" r="2.5" fill="currentColor"/>
+            <circle cx="368" cy="226" r="2.5" fill="currentColor"/>
+            <circle cx="350" cy="222" r="2.5" fill="currentColor"/>
+            <circle cx="334" cy="213" r="2.5" fill="currentColor"/>
+            <circle cx="322" cy="200" r="2.5" fill="currentColor"/>
+            <circle cx="316" cy="184" r="2.5" fill="currentColor"/>
+            <circle cx="318" cy="167" r="2.5" fill="currentColor"/>
+            <circle cx="325" cy="151" r="2.5" fill="currentColor"/>
+            <circle cx="335" cy="140" r="2.5" fill="currentColor"/>
+            <!-- inner fill -->
+            <circle cx="356" cy="142" r="2.5" fill="currentColor"/>
+            <circle cx="372" cy="140" r="2.5" fill="currentColor"/>
+            <circle cx="388" cy="143" r="2.5" fill="currentColor"/>
+            <circle cx="403" cy="149" r="2.5" fill="currentColor"/>
+            <circle cx="413" cy="160" r="2.5" fill="currentColor"/>
+            <circle cx="416" cy="173" r="2.5" fill="currentColor"/>
+            <circle cx="413" cy="187" r="2.5" fill="currentColor"/>
+            <circle cx="405" cy="199" r="2.5" fill="currentColor"/>
+            <circle cx="393" cy="208" r="2.5" fill="currentColor"/>
+            <circle cx="378" cy="213" r="2.5" fill="currentColor"/>
+            <circle cx="361" cy="213" r="2.5" fill="currentColor"/>
+            <circle cx="346" cy="207" r="2.5" fill="currentColor"/>
+            <circle cx="335" cy="196" r="2.5" fill="currentColor"/>
+            <circle cx="330" cy="182" r="2.5" fill="currentColor"/>
+            <circle cx="332" cy="167" r="2.5" fill="currentColor"/>
+            <circle cx="340" cy="155" r="2.5" fill="currentColor"/>
+            <circle cx="370" cy="156" r="2.5" fill="currentColor"/>
+            <circle cx="387" cy="159" r="2.5" fill="currentColor"/>
+            <circle cx="399" cy="168" r="2.5" fill="currentColor"/>
+            <circle cx="400" cy="182" r="2.5" fill="currentColor"/>
+            <circle cx="395" cy="194" r="2.5" fill="currentColor"/>
+            <circle cx="380" cy="199" r="2.5" fill="currentColor"/>
+            <circle cx="365" cy="199" r="2.5" fill="currentColor"/>
+            <circle cx="351" cy="194" r="2.5" fill="currentColor"/>
+            <circle cx="343" cy="183" r="2.5" fill="currentColor"/>
+            <circle cx="345" cy="170" r="2.5" fill="currentColor"/>
+            <circle cx="357" cy="170" r="2.5" fill="currentColor"/>
+            <circle cx="370" cy="171" r="2.5" fill="currentColor"/>
+            <circle cx="381" cy="178" r="2.5" fill="currentColor"/>
+            <circle cx="381" cy="189" r="2.5" fill="currentColor"/>
+            <circle cx="369" cy="184" r="2.5" fill="currentColor"/>
+            <circle cx="357" cy="181" r="2.5" fill="currentColor"/>
+          </g>
+
+          <!-- South/Southeast Asia dots -->
+          <g class="map-dots" opacity="0.18">
+            <circle cx="620" cy="128" r="2.5" fill="currentColor"/>
+            <circle cx="636" cy="124" r="2.5" fill="currentColor"/>
+            <circle cx="652" cy="122" r="2.5" fill="currentColor"/>
+            <circle cx="668" cy="124" r="2.5" fill="currentColor"/>
+            <circle cx="682" cy="130" r="2.5" fill="currentColor"/>
+            <circle cx="692" cy="140" r="2.5" fill="currentColor"/>
+            <circle cx="696" cy="153" r="2.5" fill="currentColor"/>
+            <circle cx="693" cy="166" r="2.5" fill="currentColor"/>
+            <circle cx="683" cy="176" r="2.5" fill="currentColor"/>
+            <circle cx="669" cy="182" r="2.5" fill="currentColor"/>
+            <circle cx="653" cy="184" r="2.5" fill="currentColor"/>
+            <circle cx="638" cy="180" r="2.5" fill="currentColor"/>
+            <circle cx="626" cy="170" r="2.5" fill="currentColor"/>
+            <circle cx="619" cy="157" r="2.5" fill="currentColor"/>
+            <circle cx="620" cy="143" r="2.5" fill="currentColor"/>
+            <!-- inner -->
+            <circle cx="636" cy="138" r="2.5" fill="currentColor"/>
+            <circle cx="652" cy="136" r="2.5" fill="currentColor"/>
+            <circle cx="667" cy="138" r="2.5" fill="currentColor"/>
+            <circle cx="678" cy="147" r="2.5" fill="currentColor"/>
+            <circle cx="681" cy="160" r="2.5" fill="currentColor"/>
+            <circle cx="672" cy="170" r="2.5" fill="currentColor"/>
+            <circle cx="657" cy="172" r="2.5" fill="currentColor"/>
+            <circle cx="643" cy="168" r="2.5" fill="currentColor"/>
+            <circle cx="634" cy="157" r="2.5" fill="currentColor"/>
+            <circle cx="635" cy="146" r="2.5" fill="currentColor"/>
+            <circle cx="648" cy="150" r="2.5" fill="currentColor"/>
+            <circle cx="661" cy="152" r="2.5" fill="currentColor"/>
+            <circle cx="668" cy="160" r="2.5" fill="currentColor"/>
+            <circle cx="661" cy="164" r="2.5" fill="currentColor"/>
+            <circle cx="648" cy="161" r="2.5" fill="currentColor"/>
+            <!-- Peninsula -->
+            <circle cx="690" cy="175" r="2.5" fill="currentColor"/>
+            <circle cx="695" cy="188" r="2.5" fill="currentColor"/>
+            <circle cx="698" cy="202" r="2.5" fill="currentColor"/>
+            <circle cx="697" cy="216" r="2.5" fill="currentColor"/>
+            <circle cx="693" cy="228" r="2.5" fill="currentColor"/>
+            <!-- Philippines cluster -->
+            <circle cx="745" cy="175" r="2.5" fill="currentColor"/>
+            <circle cx="758" cy="168" r="2.5" fill="currentColor"/>
+            <circle cx="764" cy="180" r="2.5" fill="currentColor"/>
+            <circle cx="753" cy="188" r="2.5" fill="currentColor"/>
+            <circle cx="748" cy="200" r="2.5" fill="currentColor"/>
+            <circle cx="756" cy="210" r="2.5" fill="currentColor"/>
+          </g>
+
+          <!-- Office pins -->
+          <!-- Dakar (West Africa) ~330,153 -->
+          <g class="office-pin" data-office="Dakar">
+            <circle cx="330" cy="158" r="7" fill="#c4622d" opacity="0.2"/>
+            <circle cx="330" cy="158" r="4" fill="#c4622d"/>
+            <line x1="330" y1="154" x2="330" y2="108" stroke="#c4622d" stroke-width="1" stroke-dasharray="2 2" opacity="0.5"/>
+            <text x="330" y="103" text-anchor="middle" font-family="DM Mono, monospace" font-size="10" fill="#c4622d">Dakar</text>
+          </g>
+
+          <!-- Rabat (North Africa) ~350,115 -->
+          <g class="office-pin" data-office="Rabat">
+            <circle cx="352" cy="116" r="7" fill="#c4622d" opacity="0.2"/>
+            <circle cx="352" cy="116" r="4" fill="#c4622d"/>
+            <line x1="352" y1="112" x2="352" y2="82" stroke="#c4622d" stroke-width="1" stroke-dasharray="2 2" opacity="0.5"/>
+            <text x="352" y="77" text-anchor="middle" font-family="DM Mono, monospace" font-size="10" fill="#c4622d">Rabat</text>
+          </g>
+
+          <!-- Nairobi (East Africa) ~408,193 -->
+          <g class="office-pin" data-office="Nairobi">
+            <circle cx="408" cy="193" r="7" fill="#c4622d" opacity="0.2"/>
+            <circle cx="408" cy="193" r="4" fill="#c4622d"/>
+            <line x1="408" y1="189" x2="450" y2="155" stroke="#c4622d" stroke-width="1" stroke-dasharray="2 2" opacity="0.5"/>
+            <text x="468" y="152" text-anchor="start" font-family="DM Mono, monospace" font-size="10" fill="#c4622d">Nairobi</text>
+          </g>
+
+          <!-- Lusaka (Southern Africa) ~390,218 -->
+          <g class="office-pin" data-office="Lusaka">
+            <circle cx="387" cy="218" r="7" fill="#c4622d" opacity="0.2"/>
+            <circle cx="387" cy="218" r="4" fill="#c4622d"/>
+            <line x1="387" y1="222" x2="387" y2="255" stroke="#c4622d" stroke-width="1" stroke-dasharray="2 2" opacity="0.5"/>
+            <text x="387" y="265" text-anchor="middle" font-family="DM Mono, monospace" font-size="10" fill="#c4622d">Lusaka</text>
+          </g>
+
+          <!-- New Delhi (South Asia) ~650,148 -->
+          <g class="office-pin" data-office="New Delhi">
+            <circle cx="649" cy="150" r="7" fill="#c4622d" opacity="0.2"/>
+            <circle cx="649" cy="150" r="4" fill="#c4622d"/>
+            <line x1="649" y1="146" x2="649" y2="105" stroke="#c4622d" stroke-width="1" stroke-dasharray="2 2" opacity="0.5"/>
+            <text x="649" y="100" text-anchor="middle" font-family="DM Mono, monospace" font-size="10" fill="#c4622d">New Delhi</text>
+          </g>
+
+          <!-- Manila (Southeast Asia) ~755,190 -->
+          <g class="office-pin" data-office="Manila">
+            <circle cx="755" cy="190" r="7" fill="#c4622d" opacity="0.2"/>
+            <circle cx="755" cy="190" r="4" fill="#c4622d"/>
+            <line x1="755" y1="186" x2="755" y2="145" stroke="#c4622d" stroke-width="1" stroke-dasharray="2 2" opacity="0.5"/>
+            <text x="755" y="140" text-anchor="middle" font-family="DM Mono, monospace" font-size="10" fill="#c4622d">Manila</text>
+          </g>
+        </svg>
+
+        <div class="offices-list">
+          <div class="office-entry">
+            <span class="office-region mono">South Asia</span>
+            <span class="office-city">New Delhi, India</span>
+          </div>
+          <div class="office-entry">
+            <span class="office-region mono">East Africa</span>
+            <span class="office-city">Nairobi, Kenya</span>
+          </div>
+          <div class="office-entry">
+            <span class="office-region mono">Southeast Asia</span>
+            <span class="office-city">Manila, Philippines</span>
+          </div>
+          <div class="office-entry">
+            <span class="office-region mono">West Africa</span>
+            <span class="office-city">Dakar, Senegal</span>
+          </div>
+          <div class="office-entry">
+            <span class="office-region mono">North Africa</span>
+            <span class="office-city">Rabat, Morocco</span>
+          </div>
+          <div class="office-entry">
+            <span class="office-region mono">Southern Africa</span>
+            <span class="office-city">Lusaka, Zambia</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact / CTA -->
-  <section class="section section-dark" id="contact">
-    <div class="container">
-      <div class="cta-block">
-        <p class="eyebrow eyebrow-light">Work With Us</p>
-        <h2>Ready to make decisions that matter?</h2>
-        <p>Whether you're designing a new program, evaluating an existing one, or looking to build your team's data capacity — we'd love to talk.</p>
-        <div class="cta-actions">
-          <a href="mailto:contact@idinsight.org" class="btn btn-primary btn-large">Contact Us</a>
-          <a href="https://www.idinsight.org" class="btn btn-ghost btn-large" target="_blank" rel="noopener">Visit Full Site</a>
-        </div>
+  <!-- Contact -->
+  <section id="contact" class="section-contact">
+    <div class="contact-inner">
+      <div class="contact-text">
+        <span class="mono label-tag">Work with us</span>
+        <h2 class="contact-heading">Start with a conversation.</h2>
+        <p>Every engagement begins with listening. Tell us what decisions you're trying to make — we'll tell you if evidence can help.</p>
+      </div>
+      <div class="contact-action">
+        <a href="mailto:contact@idinsight.org" class="contact-btn">
+          Get in touch
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="https://www.idinsight.org" class="contact-link" target="_blank" rel="noopener">Visit full site ↗</a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-logo">IDinsight</div>
-          <p>Improving lives with data and evidence.</p>
-          <p class="footer-mission">A nonprofit advisory, data analytics, and research organization.</p>
-        </div>
-        <div class="footer-links">
-          <h4>Organization</h4>
-          <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#work">Our Work</a></li>
-            <li><a href="#sectors">Sectors</a></li>
-            <li><a href="#presence">Offices</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#work">Impact Evaluations</a></li>
-            <li><a href="#work">Data Science & AI</a></li>
-            <li><a href="#work">Monitoring Systems</a></li>
-            <li><a href="#work">Capacity Building</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Connect</h4>
-          <ul>
-            <li><a href="#contact">Get in Touch</a></li>
-            <li><a href="https://www.idinsight.org" target="_blank" rel="noopener">Full Website</a></li>
-          </ul>
-        </div>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-logo">IDinsight</span>
+        <span class="footer-tagline mono">Improving lives with data &amp; evidence</span>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 IDinsight. All rights reserved.</p>
-        <p>This is a demonstration site. Visit <a href="https://www.idinsight.org" target="_blank" rel="noopener">idinsight.org</a> for the official website.</p>
+      <nav class="footer-nav">
+        <a href="#mission">Mission</a>
+        <a href="#work">Work</a>
+        <a href="#presence">Presence</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-right">
+        <p class="mono">&copy; 2025 IDinsight</p>
+        <p class="mono footer-demo">Demo site — <a href="https://www.idinsight.org" target="_blank" rel="noopener">idinsight.org</a></p>
       </div>
     </div>
   </footer>
